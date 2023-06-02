@@ -68,7 +68,7 @@
                             <div class="d-flex  mb-4">
                                 <span class="">
                                     <p class="text-muted">Card number</p>
-                                    <input class="form-control" type="text" value="4485 6888 2359 1498"
+                                    <input class="form-control" type="text" 
                                         placeholder="1234 5678 9012 3456">
                                 </span>
                                 <div class=" w-100 d-flex flex-column align-items-end">
@@ -79,12 +79,12 @@
                             <div class="d-flex mb-5">
                                 <span class="me-5">
                                     <p class="text-muted">Cardholder name</p>
-                                    <input class="form-control" type="text" value="David J.Frias"
+                                    <input class="form-control" type="text"
                                         placeholder="Name">
                                 </span>
                                 <div class="w-100 d-flex flex-column align-items-end">
                                     <p class="text-muted">CVC</p>
-                                    <input class="form-control3" type="text" value="630" placeholder="XXX">
+                                    <input class="form-control3" type="text" placeholder="XXX">
                                 </div>
                             </div>
                         </div>
