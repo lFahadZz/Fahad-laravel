@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +14,10 @@
  
 }
 body {
+    text-decoration: burlywood;
+    text-align: center;
   font-family: "Lato", sans-serif;
-  background-image: url("img/headerv.png");
-  background-repeat: no-repeat;
+      background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: 100% 100%;
   background-color: #cccccc;
@@ -35,7 +35,7 @@ body {
 
 </head>
 <body>
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:86%" id="band">
     <h2 class="w3-wide">Gamely</h2>
     <p class="w3-opacity"><i>About Gamely</i></p>
     <p class="w3-justify">  Gamely is a computer store that specializes in gaming computers/laptops. We offer a wide variety of gaming computers, from budget-friendly options to high-end machines. We also offer a variety of gaming accessories, such as monitors, keyboards, and mice.
@@ -49,7 +49,7 @@ body {
 
 
   <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:400" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <p class="w3-opacity w3-center"><i>Drop a note!</i></p>
     <div class="w3-row w3-padding-32">

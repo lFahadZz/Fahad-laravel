@@ -1,33 +1,34 @@
 @extends('layouts.app')
-@section('title', 'Computers')
+@section('title', 'laptops')
 @section('content')
+
 <div class="container">
     <div class="row m-0">
         <div class="col-lg-7 pb-5 pe-lg-5">
             <div class="row">
                 <div class="col-12 p-5">
-                    <img src="{{$Computers->img}}" class="card-img-top" alt="product.title" />
+                    <img src="{{$product->img}}" class="card-img-top" alt="product.title" />
                 </div>
                 <div class="row m-0 bg-light">
                     <div class="col-md-4 col-6 ps-30 pe-0 my-4">
                         <p class="text-muted">RAM</p>
-                        <p class="h5">{{$Computers->ram}}GB</p>
+                        <p class="h5">{{$product->ram}}GB</p>
                     </div>
                     <div class="col-md-4 col-6  ps-30 my-4">
                         <p class="text-muted">GPU</p>
-                        <p class="h5 m-0">{{$Computers->gpu}}</p>
+                        <p class="h5 m-0">{{$product->gpu}}</p>
                     </div>
                     <div class="col-md-4 col-6 ps-30 my-4">
                         <p class="text-muted">CPU</p>
-                        <p class="h5 m-0">{{$Computers->cpu}}</p>
+                        <p class="h5 m-0">{{$product->cpu}}</p>
                     </div>
                     <div class="col-md-4 col-6 ps-30 my-4">
                         <p class="text-muted">Storage</p>
-                        <p class="h5 m-0">{{$Computers->storage}}</p>
+                        <p class="h5 m-0">{{$product->storage}}</p>
                     </div>
                     <div class="col-md-4 col-6 ps-30 my-4">
                         <p class="text-muted">Color</p>
-                        <p class="h5 m-0">{{$Computers->color}}</p>
+                        <p class="h5 m-0">{{$product->color}}</p>
                     </div>
                     <div class="col-md-4 col-6 ps-30 my-4">
                         <p class="text-muted">Avalibality</p>
@@ -40,7 +41,7 @@
             <div class="row m-0">
                 <div class="col-12 px-4">
                     <div class="d-flex align-items-end mt-4 mb-2">
-                        <p class="h4 m-0"><span class="pe-1">{{$Computers->name}}</span>
+                        <p class="h4 m-0"><span class="pe-1">{{$product->name}}</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <p class="textmuted">Qty</p>
@@ -55,7 +56,7 @@
                     <div class="d-flex justify-content-between mb-3">
                         <p class="textmuted fw-bold">Total</p>
                         <div class="d-flex align-text-top ">
-                            <span class="fas fa-dollar-sign mt-1 pe-1 fs-14 "></span><span class="h4">SAR {{$Computers->price}}</span>
+                            <span class="fas fa-dollar-sign mt-1 pe-1 fs-14 "></span><span class="h4">SAR {{$product->price}}</span>
                         </div>
                     </div>
                 </div>

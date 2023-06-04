@@ -24,25 +24,54 @@
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
               
              <img src="/img/gamely-logo.png"  class="bi me-2"  height="50" role="img" aria-label="Bootstrap">
+             
             </svg>
             
           </a>
   
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="/Computers" class="nav-link px-2 text-white">Features</a></li>
-            <li><a href="/Computers" class="nav-link px-2 text-white">Pricing</a></li>
-            <li><a href="/" class="nav-link px-2 text-white">FAQs</a></li>
+            {{-- <li><a href="/parts" class="nav-link px-2 text-white">Parts</a></li> --}}
+            <li><a href="/store" class="nav-link px-2 text-white">Laptops</a></li>
+            <li><a href="/Computers" class="nav-link px-2 text-white">Computers</a></li>
             <li><a href="/" class="nav-link px-2 text-white">About</a></li>
           </ul>
   
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
             <input type="search" class="form-control form-control-dark" placeholder="Gaming laptop..." aria-label="Search">
           </form>
-  
-          <div class="text-end">
-            <a type="button" class="btn btn-outline-light me-2" href="/login">Login</a>
-            <a type="button" class="btn btn-warning" href="/register">Sign-up</a>
+
+          
+       <ul class="list-group list-group-horizontal">
+        <li class="dropdown"><a href="#"><span><i class="bi bi-person icon"></i></span></a>
+          
+          <ul>
+            @guest
+            <div class="text-end">
+            
+            @if (Route::has('login'))   
+            <li><a href="{{ route('login') }}" >{{ __('Login') }}</a></li>  
+            @endif 
+            
+            @if (Route::has('register')) 
+            <li><a href="{{ route('register') }}" >{{ __('Register') }}</a></li>
+            @endif 
+            
+            @else
+            <li><a href="{{ route('profile') }}">My Profile</a></li>
+            <li><a href="{{ route('logout') }}" class="btn btn-warning"   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+              </form>
+            </li>
+            @endguest
+            
+            
+          </ul>
+        </li>
+        
+            
+          
           </div>
         </div>
       </div>

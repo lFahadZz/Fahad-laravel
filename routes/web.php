@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComputersController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -17,20 +18,31 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-route::get('/Computers',[ComputersController::class,'ComputerType']);
-route::get('/checkout/{id}',[ComputersController::class,'Checkout'])->name('checkout');
+//profile
 
 
-    route::get('/getComputerstype',[ComputersController::class,'getComputerstype'])->name('getComputerstype');
-    // route::get('/invoic',ComputersController::class,'invoic')->name('invoic');
-    route::get('/ComputerType',[ComputersController::class,'ComputerType'])->name('computertype');
+/* Route::get('/product-details', function () {
+    return view('product-details');
+})->name('product-details');
+ */
+
+
+route::get('/profile',[UsersController::class,'profile'])->name('profile');
+ Route::get('/parts}', [ComputersController::class, 'PartType'])->name('PartType');
+Route::get('/store', [ComputersController::class, 'products'])->name('store');
+
+Route::get('/product-details/{id}', [ComputersController::class, 'productDetails'])->name('product-details');
+
+Route::get('/cart/{id}', [ComputersController::class, 'addToCart'])->name('cart');
+
+Route::get('/checkout/{id}', [ComputersController::class, 'checkout'])->name('checkout');
+
+Route::post('/invoice', [ComputersController::class, 'invoice'])->name('invoice');
+
+
 
 
 Auth::routes();
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
