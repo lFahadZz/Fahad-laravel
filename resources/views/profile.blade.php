@@ -11,7 +11,7 @@
                 class="rounded-circle img-fluid" style="width: 150px;">
               <h5 class="my-3">{{$user->name}}</h5>
               <p class="text-muted mb-1">{{$user->email}}</p>
-              <p class="text-muted mb-4">Saudi Arabia-Makkah-Jeddah</p>
+              <p class="text-muted mb-4">{{$user->address}}</p>
               <div class="d-flex justify-content-center mb-2">
                 <button type="button" class="btn btn-primary">Edit Profile</button>
               </div>
@@ -46,7 +46,7 @@
                   <p class="mb-0">Phone</p>
                 </div>
                 <div class="col-sm-9">
-                  <p class="text-muted mb-0">96638434743483</p>
+                  <p class="text-muted mb-0">{{$user->phone}}</p>
                 </div>
               </div>
               <hr>
@@ -55,7 +55,7 @@
                   <p class="mb-0">Gender</p>
                 </div>
                 <div class="col-sm-9">
-                  <p class="text-muted mb-0">Male</p>
+                  <p class="text-muted mb-0">{{$user->gender}}</p>
                 </div>
               </div>
               <hr>
@@ -64,7 +64,7 @@
                   <p class="mb-0">Address</p>
                 </div>
                 <div class="col-sm-9">
-                  <p class="text-muted mb-0">Saudi Arabia-Makkah-Jeddah</p>
+                  <p class="text-muted mb-0">{{$user->address}}</p>
                 </div>
               </div>
             </div>

@@ -22,14 +22,14 @@ use Illuminate\Support\Facades\Auth;
 //profile
 
 
-/* Route::get('/product-details', function () {
-    return view('product-details');
-})->name('product-details');
- */
+ Route::get('/', function () {
+    return view('home');
+});
+ 
 
 
 route::get('/profile',[UsersController::class,'profile'])->name('profile');
- Route::get('/parts}', [ComputersController::class, 'PartType'])->name('PartType');
+//  Route::get('/parts}', [ComputersController::class, 'PartType'])->name('PartType');
 Route::get('/store', [ComputersController::class, 'products'])->name('store');
 
 Route::get('/product-details/{id}', [ComputersController::class, 'productDetails'])->name('product-details');
@@ -45,4 +45,4 @@ Route::post('/invoice', [ComputersController::class, 'invoice'])->name('invoice'
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
