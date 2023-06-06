@@ -240,13 +240,13 @@
 </head>
 <body>
     
-    @foreach ($products as $item)
+    @foreach ($phone as $item)
 
         <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative">
             <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
             <div class="col hp">
                 <div class="card h-100 shadow-sm">
-                <a href="/checkout_laptops/{{$item->id}}">
+                <a href="/checkout_phones/{{$item->id}}">
                     <img src="{{$item->img}}" class="card-img-left"  alt="product.title" />
                 </a>
         
@@ -265,7 +265,7 @@
                     <div class="d-grid gap-2 my-4">
                         <span class="text-black"><a>{{$item->display}}</a></span>
         
-                    <a href="checkouts\checkout_laptops{{$item->id}}" class="btn btn-warning bold-btn">add to cart</a>
+                    <a href="/checkout_phones/{{$item->id}}" class="btn btn-warning bold-btn">add to cart</a>
         
                     </div>
                     <div class="clearfix mb-1">

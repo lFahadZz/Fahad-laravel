@@ -34,6 +34,7 @@
             {{-- <li><a href="/parts" class="nav-link px-2 text-white">Parts</a></li> --}}
             <li><a href="/store" class="nav-link px-2 text-white">Laptops</a></li>
             <li><a href="/Computers" class="nav-link px-2 text-white">Computers</a></li>
+            <li><a href="/phone" class="nav-link px-2 text-white">Phones</a></li>
             <li><a href="/" class="nav-link px-2 text-white">About</a></li>
           </ul>
   

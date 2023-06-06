@@ -9,7 +9,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-xl-12">
-                  <h1 class="logo"><a href="index.html">ElecLand<span>.</span></a></h1>
+                  <h1 class="logo"><a href="index.html">ss<span>.</span></a></h1>
                 </div>
               </div>
         

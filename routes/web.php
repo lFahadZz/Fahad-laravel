@@ -27,16 +27,21 @@ use Illuminate\Support\Facades\Auth;
 });
  
 
+Route::get('/home', [App\Http\Controllers\ComputersController::class, 'products'])->name('home');
 
 route::get('/profile',[UsersController::class,'profile'])->name('profile');
 //  Route::get('/parts}', [ComputersController::class, 'PartType'])->name('PartType');
+Route::get('/phone', [ComputersController::class, 'phone'])->name('phone');
 Route::get('/store', [ComputersController::class, 'products'])->name('store');
+Route::get('/Computers', [ComputersController::class, 'computer'])->name('Computers');
 
 Route::get('/product-details/{id}', [ComputersController::class, 'productDetails'])->name('product-details');
 
 Route::get('/cart/{id}', [ComputersController::class, 'addToCart'])->name('cart');
 
-Route::get('/checkout/{id}', [ComputersController::class, 'checkout'])->name('checkout');
+Route::get('/checkout_laptops/{id}', [ComputersController::class, 'checkout_laptops'])->name('checkout');
+Route::get('/checkout_phones/{id}', [ComputersController::class, 'checkout_phones'])->name('checkout');
+Route::get('/checkout_computers/{id}', [ComputersController::class, 'checkout_computers'])->name('checkout');
 
 Route::post('/invoice', [ComputersController::class, 'invoice'])->name('invoice');
 
@@ -45,4 +50,3 @@ Route::post('/invoice', [ComputersController::class, 'invoice'])->name('invoice'
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

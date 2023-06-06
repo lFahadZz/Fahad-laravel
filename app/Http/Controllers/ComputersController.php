@@ -5,23 +5,50 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
-use App\Http\Controllers\User;
-
+use App\Models\User;
 class ComputersController extends Controller
 {
-    public function topProducts(){
 
-        $products = DB::table('products')->take(3)->get();
-
-        return view('index', ['products'=>$products]);
-    }
+    
+    
     public function products(){
-
+        
         $products = DB::table('products')->get();
-
+        
+        
         return view('store', ['products'=>$products]);
     }
+    public function phone(){
 
+        $phone = DB::table('phones')->get();
+
+        return view('phone', ['phone'=>$phone]);
+  
+    }
+    public function computer(){
+
+        $computer = DB::table('computers')->get();
+
+        return view('computer', ['computers'=>$computer]);
+    }
+    public function productid() {
+        // Check if the user has selected a product
+        if (isset($products) && $products == "yes") {
+          // Get the products from the database
+          $products = DB::table('products')->get();
+      
+          // Return the view with the products data
+          return view('store', compact('products'));
+        } else {
+          // Get the phones from the database
+          $phone = DB::table('phones')->get();
+      
+          // Return the phone view
+          return view('phone', compact('phone'));
+        }
+      }
+      
+      
     public function productDetails($id){
 
         $product = DB::table('products')
@@ -62,15 +89,31 @@ class ComputersController extends Controller
         return view('cart', ['product'=>$product]);
     }
 
-    public function checkout($id){
+    public function checkout_laptops($id){
 
-        $product = DB::table('products')
+        $products = DB::table('products')
             ->where('id', $id)
             ->first();
 
-        return view('checkout', ['product'=>$product]);
+        return view('checkouts\checkout-laptops', ['product'=>$products]);
     }
+    public function checkout_phones($id){
 
+        $phone = DB::table('phones')
+            ->where('id', $id)
+            ->first();
+
+        return view('checkouts/checkout-phones', ['phones'=>$phone]);
+    }
+    public function checkout_computers($id){
+
+        $computer = DB::table('computer')
+            ->where('id', $id)
+            ->first();
+
+        return view('checkouts/checkout-computers', ['computers'=>$computer]);
+    }
+    
     public function invoice(Request $request){
         if ($request->isMethod('post')) {
             $row = [

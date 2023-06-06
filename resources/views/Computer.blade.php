@@ -240,7 +240,7 @@
 </head>
 <body>
     
-    @foreach ($products as $item)
+    @foreach ($computer as $item)
 
         <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative">
             <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
